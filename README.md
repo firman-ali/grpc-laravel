@@ -60,14 +60,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## add .rr.yaml
+## SETUP FOR gRPC
 
-version: "3"
-
-server:
-command: "php grpc-worker.php"
-
-grpc:
-listen: "tcp://127.0.0.1:9001"
-
-proto: - "proto/\*.proto"
+1. make sure to enable extension=sockets (in php.ini)
+2. update package with composer install
+3. install Roadrunner from this https://roadrunner.dev/
+4. add .rr.yaml in root project:
+   version: "3"
+   server:
+    command: "php grpc-worker.php"
+   grpc:
+    listen: "tcp://127.0.0.1:9001"
+   proto:
+    - "proto/\*.proto"
+5. run code with rr serve
