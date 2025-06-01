@@ -12,11 +12,11 @@ interface GreeterInterface extends GRPC\ServiceInterface
     public const NAME = "app.grpc.greeter.Greeter";
 
     /**
-    * @param GRPC\ContextInterface $ctx
-    * @param HelloRequest $in
-    * @return HelloReply
-    *
-    * @throws GRPC\Exception\InvokeException
-    */
+     * @param GRPC\ContextInterface $ctx
+     * @param HelloRequest $in
+     * @return HelloReply
+     *
+     * @throws GRPC\Exception\InvokeException
+     */
     public function SayHello(GRPC\ContextInterface $ctx, HelloRequest $in): HelloReply;
 }

@@ -63,9 +63,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## SETUP FOR gRPC
 
 1. make sure to enable extension=sockets (in php.ini)
-2. update package with composer install
-3. install Roadrunner from this https://roadrunner.dev/
-4. add .rr.yaml in root project:
+2. install [protoc](https://github.com/protocolbuffers/protobuf/releases)
+3. install [protoc-gen-php-grpc](https://github.com/roadrunner-server/roadrunner/releases)
+4. update package with composer install
+5. install [Roadrunner](https://roadrunner.dev/)
+6. add .rr.yaml in root project:
    version: "3"
    server:
     command: "php grpc-worker.php"
@@ -73,4 +75,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     listen: "tcp://127.0.0.1:9001"
    proto:
     - "proto/\*.proto"
-5. run code with rr serve
+7. run code with rr serve

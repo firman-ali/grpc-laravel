@@ -6,9 +6,8 @@
 namespace App\Grpc\Greeter;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
-use Illuminate\Support\Facades\App;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>app.grpc.greeter.HelloReply</code>
@@ -29,8 +28,9 @@ class HelloReply extends \Google\Protobuf\Internal\Message
      *     @type string $message
      * }
      */
-    public function __construct($data = NULL) {
-        \App\Grpc\GPBMetadata\Greeter::initOnce();
+    public function __construct($data = NULL)
+    {
+        \App\Grpc\Greeter\GPBMetadata\Greeter::initOnce();
         parent::__construct($data);
     }
 
@@ -55,6 +55,4 @@ class HelloReply extends \Google\Protobuf\Internal\Message
 
         return $this;
     }
-
 }
-
